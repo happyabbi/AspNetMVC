@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "MyView";
     Layout = null;
+
+    WebApplication2.Models.Employee emp = (WebApplication2.Models.Employee)ViewData["Employee"];
 }
 <!DOCTYPE html>
 <html>
@@ -10,7 +12,14 @@
     <title>MyView</title>
 </head>
 <body>
-    Welcome to MVC5 Step by Step learning
+    <div>
+        Welcome to MVC5 Step by Step learning<br />
+        <b>Employee Details </b><br />
+        Employee Name: @emp.FirstName@emp.LastName <br />
+        Employee Salary: @emp.Salary.ToString("C")
+    </div>
+
+
 </body>
 
 
